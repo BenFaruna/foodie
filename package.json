@@ -1,0 +1,27 @@
+{
+  "name": "foodie",
+  "version": "1.0.0",
+  "description": "Food delivery application with client and server side implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/BenFaruna/foodie.git"
+  },
+  "keywords": [
+    "React",
+    "Express",
+    "Javascript",
+    "MondoDB",
+    "Javascript",
+    "API"
+  ],
+  "author": "Bankole Michael, Benjamin Faruna, Joy Gundu, Oluwadamilola Oyeniya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenFaruna/foodie/issues"
+  },
+  "homepage": "https://github.com/BenFaruna/foodie#readme"
+}
