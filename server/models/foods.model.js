@@ -6,7 +6,7 @@ const foodSchema = new Schema({
     name: { type: String, require: true, maxLength: 50},
     description: { type: String, maxLength: 250 },
     price: Number,
-    image: Buffer,
+    image: { data: Buffer, contentType: String },
     restaurant: { type: Schema.Types.ObjectId, ref: 'Restaurant' },
 });
 
