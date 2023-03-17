@@ -12,7 +12,7 @@ function encryptPassword(password) {
 }
 
 function validatePassword(password, encryptedPassword) {
-    const isValidated = bcrypt.compareSync(password, encryptPassword);
+    const isValidated = bcrypt.compareSync(password, encryptedPassword);
     return isValidated;
 }
 
