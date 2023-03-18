@@ -13,8 +13,9 @@ const customerSchema = new Schema({
     password: { type: String, required: true, maxLength: 100 },
     address: { type: String, maxLength: 250 },
     token: { type: String },
-    orders: [{ type: mongoose.Types.ObjectId, ref: 'Order'}],
-    carts: [{ type: mongoose.Types.ObjectId, ref: 'Cart' }]
+    orders: [{ type: mongoose.Types.ObjectId, ref: 'Order' }],
+    carts: [{ type: mongoose.Types.ObjectId, ref: 'Cart' }],
+    cards: [{ type: mongoose.Types.ObjectId, ref: 'Card' }],    
 });
 
 const Customer = mongoose.model('Customer', customerSchema);

@@ -1,5 +1,6 @@
 const { encryptPassword } = require('../utils');
 const Customer = require('../models/customers.model');
+const Card = require('../models/cards.model');
 
 async function getCustomers(req, res) {
     const limit = req.params.limit || 20;
@@ -26,12 +27,12 @@ async function createCustomer(req, res) {
     const hashedPassword = encryptPassword(customerDetails.password);
     customerDetails.password = hashedPassword;
 
-    const newCustomer = new Customer(customerDetails);
+    // const newCustomer = new Customer(customerDetails);
     await Customer.create(customerDetails, (err, newCustomer) => {
         if (err) {
             return res.status(400).send({Error:err.message});
         }
-        return res.status(200).json(newCustomer);
+        return res.status(200).json({'Success': 'User Added successfully'});
     });
 }
 
@@ -56,10 +57,12 @@ async function deleteCustomer(req, res) {
 
     try {
         const customer = await Customer.findOne({ username: username});
+        const customerId = customer._id;
         await customer.deleteOne();
+        await Card.findByIdAndDelete(customerId);
         return res.status(200).json({'Success': 'User deleted successfully'});
     } catch (err) {
-        return res.status(404).json({'Error': 'Customer does not exist'});
+        return res.status(404).json({'Error': `Customer ${username} does not exist`});
     }
 }
 

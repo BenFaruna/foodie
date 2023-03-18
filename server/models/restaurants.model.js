@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const restaurantScheme = new Schema({
-    name: { type: String, required: true, maxLength: 50 },
+    name: { type: String, required: true, unique: true, maxLength: 50 },
+    description: { type: String, maxLength: 250 },
     foods: [{ type: Schema.Types.ObjectId, ref: 'Food' }],
-    description: { type: String, maxLength: 250 }
 });
 
 const Restaurant = mongoose.model('Restaurant', restaurantScheme);
