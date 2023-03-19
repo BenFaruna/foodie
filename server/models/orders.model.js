@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
-    daytime: { type: Date, required: true },
+    daytime: { type: Date, required: true, default: Date.now() },
     code: { type: Number, required: true },
     customer: { type: Schema.Types.ObjectId, ref: 'Customer' },
     items: [{ type: Schema.Types.ObjectId, ref: 'Food' }],
@@ -19,4 +19,3 @@ const orderSchema = new Schema({
 const Order = mongoose.model('Order', orderSchema);
 
 module.exports = Order;
-

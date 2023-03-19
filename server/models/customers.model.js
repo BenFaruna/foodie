@@ -14,7 +14,7 @@ const customerSchema = new Schema({
     address: { type: String, maxLength: 250 },
     token: { type: String },
     orders: [{ type: mongoose.Types.ObjectId, ref: 'Order' }],
-    carts: [{ type: mongoose.Types.ObjectId, ref: 'Cart' }],
+    cart: { type: mongoose.Types.ObjectId, ref: 'Cart' },
     cards: [{ type: mongoose.Types.ObjectId, ref: 'Card' }],    
 });
 
