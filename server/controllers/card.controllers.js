@@ -28,13 +28,15 @@ async function getCard(req, res) {
 }
 
 async function deleteCard(req, res) {
-    const customerCard = await Card.findOne({ _id: req.query._id });
+    const customerName = req.params.username;
+    const customer = await Customer.findOne({ username: customerName }).select('_id name cards');
+    const customerCard = await Card.findOne({ _id: req.query._id, customer: customer._id });
 
     try {
         await customerCard.deleteOne();
         return res.status(200).json({ 'Success': 'Card deleted successfully'});
     } catch (err) {
-        return res.status(400).json({'Error': err.message });
+        return res.status(400).json({'Error': 'Card not existing, check card id and customer username and try again' });
     }
 }
 

@@ -6,7 +6,7 @@ const Cart = require('../models/carts.model');
 async function getCustomers(req, res) {
     const limit = req.params.limit || 20;
     const customers = await Customer.find()
-        .select('_id firstname lastname username email tel cart')
+        .select('_id firstname lastname username email tel cart orders')
         .limit(limit);
     return res.status(200).json(customers);
 }
@@ -28,7 +28,6 @@ async function createCustomer(req, res) {
     const hashedPassword = encryptPassword(customerDetails.password);
     customerDetails.password = hashedPassword;
 
-    // const newCustomer = new Customer(customerDetails);
     await Customer.create(customerDetails, async (err, newCustomer) => {
         if (err) {
             return res.status(400).send({Error:err.message});
