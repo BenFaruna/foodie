@@ -11,6 +11,7 @@ import keje from "../assests/keje.png";
 import wells from "../assests/wells.png";
 import bike from "../assests/bike.png";
 import team from "../assests/team.png";
+import {Link} from 'react-router-dom';
 
 
 function Homepage() {
@@ -22,7 +23,10 @@ function Homepage() {
                 <h1>FOODIE</h1>
                 </div>
             <div className='col-6 mt-3'>
+
+                <Link to="/Mainpage">
                 <Button type='button' className='btn-light btn-lg' > Get Started</Button>
+                </Link>
             </div>
     </div>
     
