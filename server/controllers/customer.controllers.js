@@ -40,7 +40,7 @@ async function createCustomer(req, res) {
             newCustomer.cart = userCart._id;
             await newCustomer.updateOne({ cart: newCustomer.cart });
         })
-        return res.status(200).json({'Success': 'User Added successfully'});
+        return res.status(201).json({'Success': 'User Added successfully'});
     });
 }
 
@@ -74,10 +74,28 @@ async function deleteCustomer(req, res) {
     }
 }
 
+function customerLogin(req, res) {
+    return res.status(200).json({ 'Success': 'Login successful' });
+}
+
+function customerLoginFailed(req, res) {
+    return res.status(401).json({ 'Error': req.session.messages[0] });
+}
+
+function customerLogout(req, res) {
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        return res.status(200).json({'Success': 'Logout successful'});
+    });
+}
+
 module.exports = {
     getCustomer,
     getCustomers,
     createCustomer,
     deleteCustomer,
     updateCustomer,
+    customerLogin,
+    customerLoginFailed,
+    customerLogout,
 }
