@@ -11,8 +11,11 @@ import bul from "../assests/bul.png";
 import cafe from "../assests/cafe.png";
 import keje from "../assests/keje.png";
 import wells from "../assests/wells.png";
+import food from "../assests/food.png";
+import delivery from "../assests/delivery.png";
 import line from "../assests/Line 6.png";
 import { Button } from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 
 function MainPage() {
@@ -20,18 +23,36 @@ function MainPage() {
     <>
     <div className='container-fluid'>
         <div className='row'>
-            <div className={`col-md-3 ${styles.side}`}>
+            <div className={`col-md-1 ${styles.side}`}>
                 <ul>
-                    <li><img src={Home} className="img-fluid" alt="" /> <figcaption className={styles.fig}>Home</figcaption></li>
-                    <li><img src={Category}  className="img-fluid" alt="" /> <figcaption className={styles.fig}>Category</figcaption></li>
-                    <li><img src={feed}  className="img-fluid" alt="" /> <figcaption className={styles.fig}>Feed</figcaption></li>
-                    <li><img src={Order} className="img-fluid" alt="" /> <figcaption className={styles.fig}>Orders</figcaption></li>
-                    <li><img src={Account} className="img-fluid" alt="" /> <figcaption className={styles.fig}>Account</figcaption></li>
+                    <li><img src={Home} className="img-fluid" alt="" width={50}/> <figcaption className={styles.fig}>  <Link to="/Homepage"> Home</Link>   </figcaption></li>
+                    <li><img src={Category}  className="img-fluid" alt="" width={50} /> <figcaption className={styles.fig}>Category</figcaption></li>
+                    <li><img src={feed}  className="img-fluid" alt="" width={50} /> <figcaption className={styles.fig}>Feed</figcaption></li>
+                    <li><img src={Order} className="img-fluid" alt="" width={50} /> <figcaption className={styles.fig}>Orders</figcaption></li>
+                    <li><img src={Account} className="img-fluid" alt="" width={50}/> <figcaption className={styles.fig}>Account</figcaption></li>
                     
                 </ul>
             </div>
-            <div className='col-md-9'>
+            <div className='col-md-11'>
+                <div className='row'>
+                    <div className='row'>
+                        <div className='col-md-4 offset-4 mt-5'>
+                            <input type="search"  placeholder='search' name="search" id="" />
+
+                        </div>
+
+                    </div>
+                    <div className='col-md-3'>
+                        <div><img src={food} className="img-fluid" alt="" /><figcaption>Food</figcaption></div>
+                    </div>
+                    <div className='col-md-3 offset-2'>
+                        <div><img src={delivery} className="img-fluid" alt="" /><figcaption>Delivery</figcaption></div>
+                    </div>
+
+
+                </div>
             <div className='row'>
+            <h3 className='text-center mt-4 mb-4'>Restaurants You might like</h3>
         <div className='col-3'>
   <div class=""><img src={cr}  className="img-fluid" alt="chicken" /></div>
         <figcaption className='text-align-center'>Chicken Republic</figcaption>
@@ -67,23 +88,23 @@ function MainPage() {
     <div className='row'>
         <h3 className='text-center mt-4 mb-4'>Top Cities in Nigeria</h3>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Lagos</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Lagos</Button>
         </div>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Abuja</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Abuja</Button>
         </div>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Port-Harcourt</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Port-Harcourt</Button>
         </div>
         <div className='row mt-5'>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Ibadan</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Ibadan</Button>
         </div>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Ondo</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Ondo</Button>
         </div>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Enugu</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Enugu</Button>
         </div>
             </div>
     </div>
@@ -91,28 +112,31 @@ function MainPage() {
     <div className='row mt-4'>
         <h3 className='text-center mt-4 mb-4'>Top Category</h3>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Amala</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Amala</Button>
         </div>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Asian</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Asian</Button>
         </div>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Burgers</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Burgers</Button>
         </div>
         <div className='row mt-5'>
 
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Chicken</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Chicken</Button>
         </div>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Rice</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Rice</Button>
         </div>
         <div className='col-3'>
-        <Button className='btn-light btn-lg'>Desserts</Button>
+        <Button className={`btn-lg ${styles.bol}`}>Desserts</Button>
         </div>
             </div>
     </div>
 
+    <div>
+        <img src={line} className="img-fluid" alt="liness" />
+    </div>
 
             </div>
         </div>
