@@ -1,15 +1,18 @@
+const fs = require('fs');
+const path = require('path');
+
 const Food = require('../models/foods.model');
 const Restaurant = require('../models/restaurants.model');
 
 async function getFoods(req, res) {
     const limit = req.query.limit || null;
-    const foods = await Food.find().limit(limit).populate('restaurant', '_id name description');
+    const foods = await Food.find().limit(limit).populate('restaurant', '_id name description image');
     return res.status(200).json(foods);
 }
 
 async function getFood(req, res) {
     const foodId = req.params.id;
-    const food = await Food.findOne({ _id: foodId }, "_id name description").populate('restaurant', '_id name decription');
+    const food = await Food.findOne({ _id: foodId }, "_id name description image").populate('restaurant', '_id name decription');
     if (food) {
         return res.status(200).json(food);
     }
@@ -30,6 +33,15 @@ async function getRestaurantFoods(req, res) {
 async function addFood(req, res) {
     const restaurantName = req.params.name;
     const newFoodDetails = req.body;
+
+    if (req.file) {
+        newFoodDetails.image = {
+            data: fs.readFileSync(path.join(__dirname, '..', 'uploads', req.file.filename)),
+            contentType: 'image/png',
+        }
+    }
+
+    console.log(newFoodDetails);
 
     const restaurant = await Restaurant.findOne({ name: restaurantName });
 
