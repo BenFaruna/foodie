@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 const Food = require('../models/foods.model');
 const Restaurant = require('../models/restaurants.model');
 
@@ -17,11 +20,20 @@ async function getRestaurant(req, res) {
 
 async function addRestaurant(req, res) {
     const newRestaurantDetails = req.body;
+
+    if (req.file) {
+        newRestaurantDetails.image = {
+            data: fs.readFileSync(path.join(__dirname, '..', 'uploads', req.file.filename)),
+            contentType: 'image/png',
+        }
+    }
+
     await Restaurant.create(newRestaurantDetails, (err, newRestaurant) => {
         if (err) {
             return res.status(400).json({ 'Error': err.message });
         }
-        return res.status(200).json({ 'Success': 'Restaurant added successfully'});
+        delete newRestaurant.image;
+        return res.status(200).json({ 'Success': 'Restaurant added successfully', newRestaurant });
     });
 }
 

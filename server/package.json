@@ -23,6 +23,7 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "csv-parse": "^5.3.6",
     "nodemon": "^2.0.21"
   }
 }
