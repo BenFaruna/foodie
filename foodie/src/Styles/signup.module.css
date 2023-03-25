@@ -1,0 +1,29 @@
+.side {
+    background-color: #F50D1B;
+    padding: 20px;
+}
+.bol {
+    background: linear-gradient(180deg, #FB2626 0%, #FB2626 0.01%, #D9D9D9 89.06%);
+    outline: none;
+    color: #000;
+    border: none;
+}
+.form{
+    text-align: center;
+}
+::placeholder {
+    color: #000;
+    text-align: center;
+    padding: 10px;
+}
+input {
+    width: 40%;
+    padding: 10px;
+}
+a {
+    color: #000;
+}
+a :hover {
+    color: #FFF;
+}
+

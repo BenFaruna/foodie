@@ -2,6 +2,9 @@ const cors = require('cors');
 const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const { connectDatabase } = require('./utils');
 const passport = require('./auth');
