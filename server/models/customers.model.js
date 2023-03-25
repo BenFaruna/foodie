@@ -4,10 +4,10 @@ const Schema = mongoose.Schema;
 
 const customerSchema = new Schema({
     firstname: { type:String, required: true, maxLength: 50 },
-    lastname: { type: String, required: true, maxLength: 50 },
-    username: { type: String, required: true, maxLength: 50, unique: true },
+    lastname: { type: String, maxLength: 50 },
+    username: { type: String, maxLength: 50, unique: true },
     email: { type: String, required: true, maxLength: 50, unique: true },
-    tel: { type: Number, required: true },
+    tel: { type: Number, },
     gender: { type: String, enum: ['male', 'female', 'prefer not to say'], lowercase: true },
     dob: { type: Date },
     password: { type: String, required: true, maxLength: 100 },
