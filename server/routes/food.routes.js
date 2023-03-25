@@ -9,7 +9,7 @@ foodRouter.get('/', getFoods);
 foodRouter.get('/:id', getFood);
 foodRouter.put('/:id', adminAuthorization, updateFood);
 foodRouter.delete('/:id', adminAuthorization, deleteFood);
-foodRouter.get('/restaurant/:name', getRestaurantFoods);
-foodRouter.post('/restaurant/:name', adminAuthorization, upload.single('image'), addFood);
+foodRouter.get('/restaurant/:id', getRestaurantFoods);
+foodRouter.post('/restaurant/:id', adminAuthorization, upload.single('image'), addFood);
 
 module.exports = foodRouter;

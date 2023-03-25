@@ -12,7 +12,7 @@ async function getFoods(req, res) {
 
 async function getFood(req, res) {
     const foodId = req.params.id;
-    const food = await Food.findOne({ _id: foodId }, "_id name description image").populate('restaurant', '_id name decription');
+    const food = await Food.findOne({ _id: foodId }, "_id name description image").populate('restaurant', '_id name decription image');
     if (food) {
         return res.status(200).json(food);
     }
@@ -20,9 +20,9 @@ async function getFood(req, res) {
 }
 
 async function getRestaurantFoods(req, res) {
-    const restaurantName = req.params.name;
+    const restaurantId = req.params.id;
 
-    const restaurant = await Restaurant.findOne({ name: restaurantName }).populate('foods');
+    const restaurant = await Restaurant.findOne({ _id: restaurantId }).populate('foods', '_id name description image');
 
     if (restaurant) {
         return res.status(200).json(restaurant.foods);
@@ -31,7 +31,7 @@ async function getRestaurantFoods(req, res) {
 }
 
 async function addFood(req, res) {
-    const restaurantName = req.params.name;
+    const restaurantId = req.params.id;
     const newFoodDetails = req.body;
 
     if (req.file) {
@@ -41,9 +41,8 @@ async function addFood(req, res) {
         }
     }
 
-    console.log(newFoodDetails);
 
-    const restaurant = await Restaurant.findOne({ name: restaurantName });
+    const restaurant = await Restaurant.findOne({ _id: restaurantId });
 
     if (restaurant) {
         newFoodDetails.restaurant = restaurant._id;
