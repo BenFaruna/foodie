@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const restaurantScheme = new Schema({
     name: { type: String, required: true, unique: true, maxLength: 50 },
     description: { type: String, maxLength: 250 },
-    image: { data: Buffer, contentType: String },
+    image: String,
     foods: [{ type: Schema.Types.ObjectId, ref: 'Food' }],
 });
 

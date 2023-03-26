@@ -46,8 +46,8 @@ app.use('/restaurants', restaurantRouter);
 app.use('/foods', foodRouter);
 
 app.get('/', (req, res) => {
-  res.status(200).send('Working!!!!!!!!!!!');
-  // res.sendFile(__dirname + '/index.html');
+  // res.status(200).send('Working!!!!!!!!!!!');
+  res.sendFile(__dirname + '/index.html');
 });
 
 module.exports = app;

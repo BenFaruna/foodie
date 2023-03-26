@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { cloudinary } = require('../utils')
 
 const Food = require('../models/foods.model');
 const Restaurant = require('../models/restaurants.model');
@@ -35,10 +36,15 @@ async function addFood(req, res) {
     const newFoodDetails = req.body;
 
     if (req.file) {
-        newFoodDetails.image = {
-            data: fs.readFileSync(path.join(__dirname, '..', 'uploads', req.file.filename)),
-            contentType: 'image/png',
-        }
+        await cloudinary.uploader.upload(path.join(__dirname, '..', req.file.path))
+        .then((data) => {
+            newFoodDetails.image = data.secure_url;
+            fs.unlinkSync(
+                path.join(__dirname, '..', 'uploads', data.original_filename) + `.${data.format}`
+                );
+        }).catch((err) => {
+            console.log(err);
+        })
     }
 
 
