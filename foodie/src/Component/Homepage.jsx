@@ -28,7 +28,7 @@ function MainPage() {
                     <li><img src={Home} className="img-fluid" alt="" width={50}/> <figcaption className={styles.fig}>  <Link to="/Landingpage"> Home</Link>   </figcaption></li>
                     <li><img src={Category}  className="img-fluid" alt="" width={50} /> <figcaption className={styles.fig}>Category</figcaption></li>
                     <li><img src={feed}  className="img-fluid" alt="" width={50} /> <figcaption className={styles.fig}>Feed</figcaption></li>
-                    <li><img src={Order} className="img-fluid" alt="" width={50} /> <figcaption className={styles.fig}>Orders</figcaption></li>
+                    <li><img src={Order} className="img-fluid" alt="" width={50} /> <figcaption className={styles.fig}> <Link to="/Checkoutpage"> Orders</Link> </figcaption></li>
                     <li><img src={Account} className="img-fluid" alt="" width={50}/> <figcaption className={styles.fig}>Account</figcaption></li>
                     
                 </ul>
