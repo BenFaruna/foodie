@@ -4,6 +4,13 @@
   "description": "Food delivery application with client and server side implementation",
   "main": "index.js",
   "scripts": {
+    "install-client": "npm install --prefix foodie",
+    "install-server": "npm install --prefix server",
+    "install": "npm run install-client && npm run install-server",
+    "start-server": "npm run dev --prefix server",
+    "start-client": "npm start --prefix foodie",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "start-app": "npm run start-server & npm run start-client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
