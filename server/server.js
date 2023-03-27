@@ -12,12 +12,6 @@ if (process.env.production) {
     server = http.createServer(app);
 }
 
-if (app.get('env') === 'production') {
-    console.log('Production server');
-    app.set('trust proxy', 1); // trust first proxy
-    sess.cookie.secure = true; // serve secure cookies
-}  
-
 server.listen(PORT, HOST, () => {
     console.log(`Server listening on port ${PORT}`);
 });

@@ -20,7 +20,7 @@ function Homepage() {
     <div className={`container-fluid ${styles.body1}`} >
         <div className='row'>
             <div className='col-6 mt-3'>
-                <h1>FOODIE</h1>
+                <a href='/homepage'><h1>FOODIE</h1></a>
                 </div>
             <div className='col-6 mt-3'>
 

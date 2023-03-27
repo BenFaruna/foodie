@@ -21,11 +21,19 @@ const app = express();
 
 connectDatabase().catch(err => console.log(err));
 
-app.use(session({
+const sess = {
   secret: process.env.secret || 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-}));
+  cookie: {},
+}
+
+if (app.get('env') === 'production') {
+  app.set('trust proxy', 1); // trust first proxy
+  sess.cookie.secure = true; // serve secure cookies
+}
+
+app.use(session(sess));
 app.use(passport.session());
 
 app.use(cors());
@@ -38,8 +46,8 @@ app.use('/restaurants', restaurantRouter);
 app.use('/foods', foodRouter);
 
 app.get('/', (req, res) => {
-  res.status(200).send('Working!!!!!!!!!!!');
-  // res.sendFile(__dirname + '/index.html');
+  // res.status(200).send('Working!!!!!!!!!!!');
+  res.sendFile(__dirname + '/index.html');
 });
 
 module.exports = app;
