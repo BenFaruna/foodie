@@ -5,7 +5,7 @@ const Food = require('../models/foods.model');
 const Restaurant = require('../models/restaurants.model');
 
 async function getRestaurants(req, res) {
-    const restaurants = await Restaurant.find().populate('foods', '_id name description');
+    const restaurants = await Restaurant.find().populate('foods', '_id name description image');
     return res.status(200).json(restaurants);
 }
 
@@ -22,10 +22,15 @@ async function addRestaurant(req, res) {
     const newRestaurantDetails = req.body;
 
     if (req.file) {
-        newRestaurantDetails.image = {
-            data: fs.readFileSync(path.join(__dirname, '..', 'uploads', req.file.filename)),
-            contentType: 'image/png',
-        }
+        await cloudinary.uploader.upload(path.join(__dirname, '..', req.file.path))
+        .then((data) => {
+            newRestaurantDetails.image = data.secure_url;
+            fs.unlinkSync(
+                path.join(__dirname, '..', 'uploads', data.original_filename) + `.${data.format}`
+                );
+        }).catch((err) => {
+            console.log(err);
+        })
     }
 
     await Restaurant.create(newRestaurantDetails, (err, newRestaurant) => {
