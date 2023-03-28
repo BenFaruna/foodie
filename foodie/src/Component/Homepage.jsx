@@ -63,7 +63,7 @@ function MainPage() {
         </div>
         <div className='col-3'>
   <div class=""><img src={bul} className="img-fluid" alt="liness" /></div>
-  <figcaption className='text-align-center'>Bulgaria Foods</figcaption>
+  <figcaption className='text-align-center'> <Link to="/bulgaria">Bulgaria Foods</Link></figcaption>
         </div>
         <div className='row mt-5'>
             <div className='col-3'>
