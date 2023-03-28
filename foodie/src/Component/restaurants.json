@@ -1,0 +1,149 @@
+[
+    {
+        "_id": "64214cdfdefea0673f3e385e",
+        "name": "Bulgaria Foods",
+        "foods": [
+            {
+                "_id": "642150dedefea0673f3e38f8",
+                "name": "Extra Large Boli",
+                "description": "6 Large Boli with Beef Peppered Sauce"
+            },
+            {
+                "_id": "642150e4defea0673f3e38fc",
+                "name": "Sweet Treats Tray",
+                "description": "Chicken Burger, 4 Doughnuts, 2 500ml Milkshakes"
+            },
+            {
+                "_id": "642150ebdefea0673f3e3900",
+                "name": "Chinese Noodles",
+                "description": "A bowl of well garnished Chinese noodles"
+            },
+            {
+                "_id": "642150f2defea0673f3e3904",
+                "name": "Jollof Rice and Chicken",
+                "description": "A bowl of Jollof rice chicken with Roasted Chicken and Slices of Fried Plantain"
+            },
+            {
+                "_id": "642150f9defea0673f3e3908",
+                "name": "A full bowl of Nkwobi",
+                "description": "A bowl of Spiced Nkwobi Garnished with vegetables"
+            }
+        ],
+        "__v": 0
+    },
+
+
+
+    {
+        "_id": "64214cdfdefea0673f3e3860",
+        "name": "Wells Foods",
+        "foods": [],
+        "__v": 0
+    },
+
+
+    {
+        "_id": "64214cdfdefea0673f3e3862",
+        "name": "Keje Grills",
+        "foods": [
+            {
+                "_id": "64214ff2defea0673f3e38bc",
+                "name": "Spicy Snail Kebab",
+                "description": "Five Sticks of Beef Kebab   with a side of spicy sauce  and a bottle of soft drink"
+            },
+            {
+                "_id": "64215050defea0673f3e38c0",
+                "name": "Roasted Tilapia",
+                "description": "A full Tilapia with vegetable salad and a small side of Fries and Ketchup"
+            },
+            {
+                "_id": "64215060defea0673f3e38c4",
+                "name": "Fries and Honey Peppered sauce",
+                "description": "enjoy a serving of Chips and Honey Peppered chicken"
+            },
+            {
+                "_id": "64215067defea0673f3e38c8",
+                "name": "Roasted Short Ribs",
+                "description": "A Serving of Short Ribs with an extra Spicy sauce for the heat"
+            },
+            {
+                "_id": "6421506fdefea0673f3e38cc",
+                "name": "Beef Suya",
+                "description": "The Suya Spiced Fried Beef, Lettuce, Secret Sauce"
+            }
+        ],
+        "__v": 0
+    },
+
+    {
+        "_id": "64214ce0defea0673f3e3864",
+        "name": "KFC",
+        "foods": [
+            {
+                "_id": "642150bfdefea0673f3e38e4",
+                "name": "Extra Large Fries",
+                "description": "Fried Potatoes perfectly paired with Our secret hot sauce"
+            },
+            {
+                "_id": "642150c5defea0673f3e38e8",
+                "name": "Zinger Triple Threat Friday",
+                "description": "hree Delicious Burgers with 40 percent Discount every Friday"
+            },
+            {
+                "_id": "642150cadefea0673f3e38ec",
+                "name": "MVP Box",
+                "description": "Enjoy 3 pieces of deep fried Chicken, 1 Regular Chips and 500ml Pepsi"
+            },
+            {
+                "_id": "642150d1defea0673f3e38f0",
+                "name": "Double Zinger Burger Meal",
+                "description": "1 Double Zinger Burger, Regular chips,  500ml Pepsi"
+            },
+            {
+                "_id": "642150d7defea0673f3e38f4",
+                "name": "21 Pieces KFC Bucket",
+                "description": "T21 Pieces of Hot and Crispy Original Chicken with 1.5L Pepsi"
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "64214ce0defea0673f3e3866",
+        "name": "Cafe La Roca",
+        "foods": [],
+        "__v": 0
+    },
+
+    {
+        "_id": "64214ce0defea0673f3e3868",
+        "name": "Chicken Republic",
+        "foods": [
+            {
+                "_id": "6421508cdefea0673f3e38d0",
+                "name": "Refuel Dodo Max Meal",
+                "description": "One Piece of soulfully Spiced Fried Chicken  Served with your choice of spaghetti Fried/Jollof  rice Or Rice or Beans with sauce plus our tasty   New Plantain Cubes and a refreshing PET drink"
+            },
+            {
+                "_id": "64215092defea0673f3e38d4",
+                "name": "Citizens Meal with Chips",
+                "description": "Two Mouth- Watering pieces of Soulfully  Spiced Fried Chicken Served with Regular   Chips Plus a refreshing PET Drink"
+            },
+            {
+                "_id": "64215099defea0673f3e38d8",
+                "name": "Chief Burger",
+                "description": "Enjoy a mighty chief burger with soulfully spiced chicken, lettuce, cheese and our secret sauce on a fresh bun"
+            },
+            {
+                "_id": "6421509fdefea0673f3e38dc",
+                "name": "Big Boyz Meal",
+                "description": "Enjoy a chief burger with one piece of soulfully fried chicken, your choice of spaghetti, Fried/ Jollof rice plus Coleslaw and a Monster energy drink"
+            },
+            {
+                "_id": "642150a7defea0673f3e38e0",
+                "name": "New Double Spicy ChickenWhizz Meal",
+                "description": "he new Spicy ChickenWhizz Sandwich Soulfully Spiced Fried Chicken, Lettuce, Secret Sauce"
+            }
+        ],
+        "__v": 0
+    }
+]
