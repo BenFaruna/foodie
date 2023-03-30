@@ -69,7 +69,7 @@ function Bulgaria () {
     </ul>
 </div>
 
-<div className='col-md-11'>   
+<div className='col-11'>   
         <div>
             <img src={BulgariaCover} alt="" />
         </div>
@@ -97,8 +97,7 @@ function Bulgaria () {
                  
                 </div>
 
-                <div className=''>
-                </div>
+
 
                 </div>
         )
