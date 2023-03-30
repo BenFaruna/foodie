@@ -6,6 +6,7 @@ import Login from './Component/Login';
 // import Cart from './Component/Cartpage';
 import Checkoutpage from './Component/Checkoutpage';
 import Bulgaria from '../src/Component/Restaurant/Bulgaria';
+import Kfc from '../src/Component/Restaurant/Kfc';
 import Checkoutpage2 from './Component/Checkoutpage2'
 
 
@@ -23,6 +24,7 @@ function App() {
       {/* <Route path="/cart" element={<Cart />} /> */}
       {/* <Route path="/checkoutpage" element={<Checkoutpage />} /> */}
       <Route path="/bulgaria" element={< Bulgaria/>} />
+      <Route path="/kfc" element={< Kfc/>} />
       </Routes>
     
     </div>
