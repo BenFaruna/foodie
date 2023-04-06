@@ -14,7 +14,7 @@ h2{
     font-size: 26px;
 }
 /* stylecodes for the phoneNumber block */
-.phn-no{
+.phn_no{
   display: flex;
   margin: 20px 250px 10px 250px;
   border: solid 2px black;
@@ -22,15 +22,15 @@ h2{
   padding: 30px 0px 30px 0px;
   background-color: white;
 }
-.phn-no-1{
+.phn_no_1{
     padding: 0px 0px 0px 50px;
 }
-.phn-no-1 span{
+.phn_no_1 span{
     color: black;
     font-size: 20px;
     font-weight: 600;
 }
-.phn-no-2{
+.phn_no_2{
     border: solid thin black;
     border-radius: 2px;
     padding: 0px 50px 0px 50px;
@@ -38,14 +38,14 @@ h2{
     margin-top: 10px;
     font-size: 16px;
 }
-.phn-no-ed{
+.phn_no_ed{
     margin-left: 300px;
     color: red;
     font-size: 20px;
     cursor: pointer;
 }
 /* stylecodes for the payment details block */
-.pay-det{
+.pay_det{
     display: flex;
     margin: 20px 250px 10px 250px;
     border: solid 2px black;
@@ -53,25 +53,25 @@ h2{
     padding: 30px 0px 30px 0px;
     background-color: white;
 }
-.pay-det-1{
+.pay_det_1{
     padding: 0px 0px 0px 50px;
 }
-.pay-det-1 span{
+.pay_det_1 span{
     font-size: 20px;
     font-weight: 600;
 }
-.pay-det-2{
+.pay_det_2{
     margin-top: 10px;
     font-size: 16px;
 }
-.pay-det-ed{
+.pay_det_ed{
     margin-left: 300px;
     color: red;
     font-size: 20px;
     cursor:pointer;
 }
 /* stylecodes for order details block */
-.ord-det{
+.ord_det{
     margin: 20px 300px 10px 300px;
     border: solid 2px black;
     border-radius: 10px;
@@ -79,13 +79,13 @@ h2{
     background-color: white;
     box-shadow: 5px 7px rgba(0, 0, 0, 0.628);
 }
-.ord-det span{
+.ord_det span{
     margin-left:50px;
     font-weight: 600;
     font-size: 20px;
 }
 /* stylecodes for quantity, order description, and bills */
-.ord-det-tab-1{
+.ord_det_tab_1{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -95,7 +95,7 @@ h2{
     color: black;
 }
 /* stylecodes for subtotal */
-.ord-det-tab-2{
+.ord_det_tab_2{
     display: flex;
     justify-content: space-between;
     padding: 5px 90px 5px 90px;
@@ -103,7 +103,7 @@ h2{
     font-weight: 600;
 }
 /* stylecodes for vat */
-.ord-det-tab-3{
+.ord_det_tab_3{
     display: flex;
     justify-content: space-between;
     padding: 5px 90px 5px 90px;
@@ -111,7 +111,7 @@ h2{
     font-weight: 600; 
 }
 /* stylecodes for delivery fee */
-.ord-det-tab-4{
+.ord_det_tab_4{
     display: flex;
     justify-content: space-between;
     padding: 5px 90px 5px 90px;
@@ -119,7 +119,7 @@ h2{
     font-weight: 600;
 }
 /* stylecodes for total */
-.ord-det-tab-5{
+.ord_det_tab_5{
     display: flex;
     justify-content: space-between;
     padding: 5px 90px 5px 90px;
@@ -127,28 +127,31 @@ h2{
     font-weight: 600;
 }
 /* stylecodes for delivery address */
-.ord-det-tab-6{
+.ord_det_tab_6{
     padding: 35px 90px 35px 90px;
     font-size: 18px;
 }
-.ord-det-tab-add{
+.ord_det_tab_add{
     font-weight: 600;
 }
 /* stylecodes for vendor */
-.ord-det-tab-7{
+.ord_det_tab_7{
     padding: 35px 90px 35px 90px;
     font-size: 18px;
 }
-.ord-det-tab-ven{
+.ord_det_tab_ven{
     font-weight: 600;
 }
 /* stylecodes for order id */
-.ord-det-tab-8{
+.ord_det_tab_8{
     padding: 35px 90px 35px 90px;
     font-size: 18px;
 }
-.ord-det-tab-id{
+.ord_det_tab_id{
     font-weight: 600;
+}
+.ord_det_tab_id_2{
+    font-size: 18px;
 }
 /* stylecodes for button */
 button{
