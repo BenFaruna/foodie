@@ -6,6 +6,8 @@ import Login from './Component/Login';
 // import Cart from './Component/Cartpage';
 import Checkoutpage from './Component/Checkoutpage';
 import Bulgaria from '../src/Component/Restaurant/Bulgaria';
+import Kfc from '../src/Component/Restaurant/Kfc';
+import Checkoutpage2 from './Component/Checkoutpage2'
 
 
 function App() {
@@ -18,9 +20,11 @@ function App() {
       <Route path="/homepage" element={<Homepage />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/checkoutpage" element={<Checkoutpage2 />} />
       {/* <Route path="/cart" element={<Cart />} /> */}
-      <Route path="/checkoutpage" element={<Checkoutpage />} />
+      {/* <Route path="/checkoutpage" element={<Checkoutpage />} /> */}
       <Route path="/bulgaria" element={< Bulgaria/>} />
+      <Route path="/kfc" element={< Kfc/>} />
       </Routes>
     
     </div>
